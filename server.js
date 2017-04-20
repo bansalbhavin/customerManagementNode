@@ -10,6 +10,9 @@ var express = require('express'),
     DB = require('./accessDB'),
     protectJSON = require('./lib/protectJSON'),
     app = express();
+    
+global.cors = require('cors');
+app.use(cors());
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
